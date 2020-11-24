@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Sohne Schmal';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~assets/fonts/soehne-schmal-test-fett.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sohne Breit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~assets/fonts/soehne-breit-test-dreiviertelfett.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sohne Book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~assets/fonts/soehne-test-buch.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sohne Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~assets/fonts/soehne-test-halbfett.woff') format('woff');
+}
