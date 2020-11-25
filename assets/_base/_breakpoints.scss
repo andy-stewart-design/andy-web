@@ -1,10 +1,10 @@
 @mixin respond ($breakpoint) {
   
-    @if $breakpoint==sm {
-      @media only screen and (min-width: 640px) {
-        @content;
-      }
+  @if $breakpoint==sm {
+    @media only screen and (min-width: 640px) {
+      @content;
     }
+  }
 
   @if $breakpoint==md {  
     @media only screen and (min-width: 768px) {
@@ -32,6 +32,18 @@
 
   @if $breakpoint==3xl {  
     @media only screen and (min-width: 1536px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==landscape {  
+    @media only screen and (orientation:landscape) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==portrait {  
+    @media only screen and (orientation:portrait) {
       @content;
     }
   }
