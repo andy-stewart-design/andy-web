@@ -55,7 +55,7 @@ export default {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  min-height: 520px;
+  min-height: 440px;
   // border: 4px solid blue;
 
   .eye-container {
@@ -88,12 +88,12 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    // padding-bottom: 2.5rem;
-    // background: grey;
+    padding-bottom: 2.5rem;
 
     @include breakpoints.respond(landscape) {
       align-items: center;
       height: 8%;
+      padding-bottom: 0rem;
     }
 
     .subhead {
@@ -113,14 +113,6 @@ export default {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-    }
-  }
-
-  .below {
-    padding-bottom: 2.5rem;
-
-    @include breakpoints.respond(landscape) {
-      padding-bottom: 0rem;
     }
   }
 }
