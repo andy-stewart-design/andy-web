@@ -98,9 +98,10 @@ export default {
 
     .subhead {
       font-size: 0.75rem;
-      font-family: 'Sohne Bold', sans-serif;
+      font-family: 'Sohne Book', sans-serif;
       text-align: center;
-      color: #bebebe;
+      letter-spacing: 0.1px;
+      color: rgba(255, 255, 255, 0.8);
       width: 80%;
 
       @include breakpoints.respond(landscape) {
@@ -108,6 +109,7 @@ export default {
       }
 
       a {
+        font-family: 'Sohne Bold', sans-serif;
         color: #c300ff;
         background: -webkit-linear-gradient(0deg, #c300ff 30%, #4346ff 100%);
         -webkit-background-clip: text;

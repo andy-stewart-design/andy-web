@@ -2,26 +2,30 @@
   font-family: 'Sohne Schmal';
   font-style: normal;
   font-weight: 700;
-  src: url('~assets/fonts/soehne-schmal-test-fett.woff') format('woff');
+  src:  url('~assets/fonts/soehne-schmal-web-fett.woff2') format('woff2'),
+        url('~assets/fonts/soehne-schmal-web-fett.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Sohne Breit';
   font-style: normal;
   font-weight: 700;
-  src: url('~assets/fonts/soehne-breit-test-dreiviertelfett.woff') format('woff');
+  src:  url('~assets/fonts/soehne-breit-web-dreiviertelfett.woff2') format('woff2'),
+        url('~assets/fonts/soehne-breit-web-dreiviertelfett.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Sohne Book';
   font-style: normal;
   font-weight: 400;
-  src: url('~assets/fonts/soehne-test-buch.woff') format('woff');
+  src:  url('~assets/fonts/soehne-web-buch.woff2') format('woff2'),
+        url('~assets/fonts/soehne-web-buch.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Sohne Bold';
   font-style: normal;
   font-weight: 700;
-  src: url('~assets/fonts/soehne-test-halbfett.woff') format('woff');
+  src:  url('~assets/fonts/soehne-web-halbfett.woff2') format('woff2'),
+        url('~assets/fonts/soehne-web-halbfett.woff') format('woff');
 }

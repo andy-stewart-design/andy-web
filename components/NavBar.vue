@@ -3,8 +3,8 @@
     <nuxt-link :to="{ name: 'index' }" class="logo">
       <Logo class="LogoMark" />
     </nuxt-link>
-    <p class="LogoType TypeTop">Andy Stew<span class="dash">—</span></p>
-    <p class="LogoType TypeBot"><span class="dash">—</span>Art Design</p>
+    <p class="LogoType TypeTop">Andy Stew—</p>
+    <p class="LogoType TypeBot">—Art Design</p>
   </nav>
 </template>
 

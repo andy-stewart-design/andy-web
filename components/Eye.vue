@@ -8,21 +8,13 @@
     viewBox="0 0 1470 1080"
     xml:space="preserve"
   >
-    <g id="text">
-      <text
-        transform="matrix(1 0 0 1 213.0078 271.1143)"
-        class="st0 st1 st2 st3"
-      >
-        GRAPHIC
-      </text>
-      <text
-        transform="matrix(1 0 0 1 310.8354 1075.5527)"
-        class="st0 st1 st2 st3"
-      >
-        DESIGN
-      </text>
+    <g class="text">
+      <title>Headline: Graphic Design</title>
+      <text transform="matrix(1 0 0 1 213.0078 271.1143)">GRAPHIC</text>
+      <text transform="matrix(1 0 0 1 310.8354 1075.5527)">DESIGN</text>
     </g>
-    <g id="image">
+    <g class="image">
+      <title>Op Art Eye Graphic</title>
       <linearGradient
         id="SVGID_1_"
         gradientUnits="userSpaceOnUse"
@@ -37,7 +29,6 @@
         <stop offset="1" style="stop-color: #3232ff" />
       </linearGradient>
       <path
-        class="st4"
         d="M1466.6,534.3c-5.5-11.4-19.6-39-43.6-75.3c-1.8-2.7-6-1.2-5.6,2c3,25.9,4.5,52.2,4.5,78.9
 		c0,24.2-1.2,48.1-3.7,71.6c-0.3,3.2,3.8,4.7,5.6,2.1c22.9-32.8,36.9-57.7,42.6-68.2C1468.2,542,1468.3,537.9,1466.6,534.3z
 		 M3.7,545.5c5.7,10.5,19.7,35.3,42.6,68.2c1.8,2.6,5.9,1.1,5.6-2.1c-2.4-23.5-3.7-47.4-3.7-71.6c0-26.7,1.5-53,4.5-78.9
@@ -71,22 +62,21 @@
 </template>
 
 <style scoped lang="scss">
-.st0 {
-  fill: #fff;
-}
-.st1 {
-  font-family: 'Sohne Schmal', sans-serif;
-  text-transform: uppercase;
-  color: white;
-}
-.st2 {
-  font-size: 369.1685px;
-}
-.st3 {
-  letter-spacing: 9;
-}
-.st4 {
-  opacity: 0.9;
-  fill: url(#SVGID_1_);
+.eye-svg {
+  display: block;
+
+  .text text {
+    font-family: 'Sohne Schmal', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 370px;
+    text-align: center;
+    fill: #fff;
+  }
+
+  .image path {
+    opacity: 0.875;
+    fill: url(#SVGID_1_);
+  }
 }
 </style>
