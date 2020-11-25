@@ -51,12 +51,11 @@ export default {
 .container {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  min-height: 480px;
+  min-height: 520px;
   // border: 4px solid blue;
 
   .eye-container {
@@ -66,7 +65,7 @@ export default {
     width: 100%;
     // border: 1px solid blue;
 
-    @include breakpoints.respond(md) {
+    @include breakpoints.respond(landscape) {
       height: 84%;
     }
 
@@ -76,7 +75,7 @@ export default {
       margin: auto;
       // border: 2px solid yellow;
 
-      @include breakpoints.respond(md) {
+      @include breakpoints.respond(landscape) {
         width: 80%;
       }
     }
@@ -89,13 +88,12 @@ export default {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 2.5rem;
+    // padding-bottom: 2.5rem;
     // background: grey;
 
-    @include breakpoints.respond(md) {
+    @include breakpoints.respond(landscape) {
       align-items: center;
       height: 8%;
-      padding-bottom: 0rem;
     }
 
     .subhead {
@@ -105,7 +103,7 @@ export default {
       color: #bebebe;
       width: 80%;
 
-      @include breakpoints.respond(md) {
+      @include breakpoints.respond(landscape) {
         font-size: 0.875rem;
       }
 
@@ -115,6 +113,14 @@ export default {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+    }
+  }
+
+  .below {
+    padding-bottom: 2.5rem;
+
+    @include breakpoints.respond(landscape) {
+      padding-bottom: 0rem;
     }
   }
 }

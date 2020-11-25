@@ -30,7 +30,7 @@ nav {
     height: 2.5rem;
     z-index: 100000;
 
-    @include breakpoints.respond(md) {
+    @include breakpoints.respond(landscape) {
       width: 3rem;
       height: 3rem;
     }
@@ -59,7 +59,7 @@ nav {
     }
   }
 
-  @include breakpoints.respond(md) {
+  @include breakpoints.respond(landscape) {
     font-size: 1rem;
   }
 
@@ -68,7 +68,7 @@ nav {
     top: 1.5rem;
     // border: 1px solid blue;
 
-    @include breakpoints.respond(md) {
+    @include breakpoints.respond(landscape) {
       top: 0;
       transform: rotate(90deg) translateY(-240%);
       transform-origin: 0 0;
@@ -81,7 +81,7 @@ nav {
     bottom: 1.5rem;
     // border: 1px solid blue;
 
-    @include breakpoints.respond(md) {
+    @include breakpoints.respond(landscape) {
       top: 0;
       bottom: auto;
       left: auto;
