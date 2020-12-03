@@ -3,6 +3,9 @@
     <nuxt-link :to="{ name: 'index' }" class="logo">
       <Logo class="LogoMark" />
     </nuxt-link>
+    <div class="trigger" @click="toggleModal">
+      <div class="trigger-icon"></div>
+    </div>
     <p class="LogoType TypeTop">Andy Stew—</p>
     <p class="LogoType TypeBot">—Art Design</p>
   </nav>
@@ -12,8 +15,14 @@
 import Logo from '@/components/Logo'
 
 export default {
+  name: 'NavBar',
   components: {
     Logo,
+  },
+  methods: {
+    toggleModal() {
+      this.$emit('toggle-modal')
+    },
   },
 }
 </script>
@@ -39,6 +48,39 @@ nav {
       width: 100%;
       fill: #fff;
       transition: fill 0.25s;
+    }
+  }
+  .trigger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 100000;
+
+    @include breakpoints.respond(landscape) {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .trigger-icon {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      transition: transform 0.375s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .trigger-icon {
+        transform: scale(1.5);
+      }
     }
   }
 
