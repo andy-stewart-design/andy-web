@@ -56,7 +56,7 @@ export default {
     right: 0;
     height: 100vh;
     width: 100%;
-    max-width: 360px;
+    max-width: 400px;
     padding: 1.75rem;
     background: var(--white);
     color: var(--black);
