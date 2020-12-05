@@ -46,7 +46,7 @@ nav {
 
     .LogoMark {
       width: 100%;
-      fill: #fff;
+      fill: var(--white);
       transition: fill 0.25s;
     }
   }
@@ -69,8 +69,7 @@ nav {
     .trigger-icon {
       width: 16px;
       height: 16px;
-      background-color: #fff;
-      border: 2px solid #fff;
+      background-color: var(--white);
       border-radius: 50%;
       transition: transform 0.375s cubic-bezier(0.65, 0, 0.35, 1);
     }
@@ -90,7 +89,7 @@ nav {
     text-transform: uppercase;
     font-size: 0.875rem;
     letter-spacing: 3px;
-    color: #fff;
+    color: var(--white);
     width: 100%;
     text-align: center;
     z-index: 10000;

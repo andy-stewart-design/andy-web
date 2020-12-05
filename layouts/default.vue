@@ -1,9 +1,7 @@
 <template>
   <div>
     <nav-bar @toggle-modal="toggleModal" />
-    <transition name="fade">
-      <modal v-show="modalActive" @toggle-modal="toggleModal" />
-    </transition>
+    <modal v-show="modalActive" @toggle-modal="toggleModal" />
     <Nuxt />
   </div>
 </template>
@@ -30,12 +28,4 @@ export default {
 }
 </script>
 
-<style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-</style>
+<style lang="scss"></style>
