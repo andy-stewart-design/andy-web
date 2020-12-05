@@ -85,8 +85,7 @@ a {
       top: 0;
       right: 0;
       width: 0.95rem;
-      height: 1px;
-      background: var(--white);
+      border-top: 1px solid var(--white);
       transform: rotate(-45deg);
       transform-origin: 100% 0%;
     }
