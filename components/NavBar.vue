@@ -3,7 +3,7 @@
     <nuxt-link :to="{ name: 'index' }" class="logo">
       <Logo class="LogoMark" />
     </nuxt-link>
-    <div class="trigger" @click="toggleModal">
+    <div class="modal-trigger" @click="toggleModal">
       <div class="trigger-icon"></div>
     </div>
     <p class="LogoType TypeTop">Andy Stew—</p>
@@ -50,7 +50,7 @@ nav {
       transition: fill 0.25s;
     }
   }
-  .trigger {
+  .modal-trigger {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -69,9 +69,9 @@ nav {
     .trigger-icon {
       width: 16px;
       height: 16px;
-      background-color: var(--white);
+      border: 2px solid var(--white);
       border-radius: 50%;
-      transition: transform 0.375s cubic-bezier(0.65, 0, 0.35, 1);
+      transition: all 0.375s cubic-bezier(0.65, 0, 0.35, 1);
     }
 
     &:hover {
@@ -79,6 +79,7 @@ nav {
 
       .trigger-icon {
         transform: scale(1.5);
+        background: var(--white);
       }
     }
   }
