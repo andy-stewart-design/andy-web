@@ -8,7 +8,7 @@
           <div class="icon-close" @click="toggleModal"></div>
         </div>
         <p>
-          I believe that design works through eyes and into the mind. In the
+          I believe that design works through the eyes into the mind. In the
           right context, with the right tone of voice, graphic design has the
           ability to spark emotion, engage the imagination and even, at its
           best, inspire action.
@@ -22,7 +22,7 @@
           As a generalist by both training and predeliction, I'm well versed in
           translating visions, notions and ideas into full-blown realities
           across a variety of media, from brand identities to digital
-          experience.
+          experiences.
         </p>
         <a href="mailto:andy.stewart1170@gmail.com">
           <p>Get in Touch</p>
