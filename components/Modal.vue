@@ -112,7 +112,7 @@ a {
     max-width: 480px;
     padding: 1.25rem;
     background: var(--blue);
-    background: linear-gradient(135deg, var(--blue) 0%, #c300ff 90%);
+    background: linear-gradient(135deg, var(--blue) 0%, #a200ff 100%);
     color: var(--white);
     box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.6);
     font-size: 0.875rem;
@@ -171,18 +171,6 @@ a {
         }
       }
     }
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--blue);
-      background: linear-gradient(315deg, var(--blue) 0%, #c300ff 90%);
-      animation: bg-fade 4s infinite alternate ease-in-out;
-    }
   }
 }
 
@@ -214,15 +202,6 @@ a {
     transform: translate3d(100%, 0, 0);
     transition: transform 0.5s cubic-bezier(0.32, 0, 0.67, 0);
     transition-delay: 0s;
-  }
-}
-
-@keyframes bg-fade {
-  0% {
-    opacity: 80%;
-  }
-  100% {
-    opacity: 20%;
   }
 }
 </style>
