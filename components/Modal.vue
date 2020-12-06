@@ -111,8 +111,7 @@ a {
     width: 100%;
     max-width: 480px;
     padding: 1.25rem;
-    background: var(--blue);
-    background: linear-gradient(135deg, var(--blue) 0%, #a200ff 100%);
+    background: #5e32ff;
     color: var(--white);
     box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.6);
     font-size: 0.875rem;
