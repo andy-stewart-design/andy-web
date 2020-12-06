@@ -23,10 +23,50 @@
         x2="1129.2375"
         y2="929.423"
       >
-        <stop offset="0" style="stop-color: #3232ff" />
-        <stop offset="0.3" style="stop-color: #c300ff" />
-        <stop offset="0.7" style="stop-color: #d200c8" />
-        <stop offset="1" style="stop-color: #3232ff" />
+        <stop offset="0" style="stop-color: #3232ff">
+          <animate
+            attributeName="stop-color"
+            values="#3232ff; #c300ff; #3232ff"
+            dur="6s"
+            repeatCount="indefinite"
+          ></animate>
+        </stop>
+        <stop offset="0.3" style="stop-color: #c300ff">
+          <animate
+            attributeName="stop-color"
+            values="#c300ff; #3232ff; #c300ff"
+            dur="8s"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="offset"
+            values="0.3; 0.5; 0.3"
+            dur="8s"
+            repeatCount="indefinite"
+          ></animate>
+        </stop>
+        <stop offset="0.7" style="stop-color: #c300ff">
+          <animate
+            attributeName="stop-color"
+            values="#c300ff; #3232ff; #c300ff"
+            dur="6s"
+            repeatCount="indefinite"
+          ></animate>
+          <animate
+            attributeName="offset"
+            values="0.7; 0.5; 0.7"
+            dur="6s"
+            repeatCount="indefinite"
+          ></animate>
+        </stop>
+        <stop offset="1" style="stop-color: #3232ff">
+          <animate
+            attributeName="stop-color"
+            values="#3232ff; #c300ff; #3232ff"
+            dur="8s"
+            repeatCount="indefinite"
+          ></animate>
+        </stop>
       </linearGradient>
       <path
         d="M1466.6,534.3c-5.5-11.4-19.6-39-43.6-75.3c-1.8-2.7-6-1.2-5.6,2c3,25.9,4.5,52.2,4.5,78.9

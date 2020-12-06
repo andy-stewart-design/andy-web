@@ -8,10 +8,10 @@
           <div class="icon-close" @click="toggleModal"></div>
         </div>
         <p>
-          I believe that design works through the eyes into the mind. In the
-          right context, with the right tone of voice, graphic design has the
-          ability to spark emotion, engage the imagination and even, at its
-          best, inspire action.
+          I believe that design works on the mind through the eyes. In the right
+          context, with the right tone of voice, graphic design has the ability
+          to spark emotion, engage the imagination and even, at its best,
+          inspire action.
         </p>
         <p>
           I’m Andy Stewart, a Creative Director and Designer based in Seattle.
@@ -19,14 +19,18 @@
           strategic, thoughtful design.
         </p>
         <p>
-          As a generalist by both training and predeliction, I'm well versed in
+          As a generalist by both training and predilection, I'm well versed in
           translating visions, notions and ideas into full-blown realities
           across a variety of media, from brand identities to digital
           experiences.
         </p>
         <a href="mailto:andy.stewart1170@gmail.com">
           <p>Get in Touch</p>
-          <div class="arrow"></div>
+          <div class="arrow">
+            <svg viewBox="0 0 12 12">
+              <path d="M12,0v10h-1V1.7L0.9,11.9l-0.7-0.7L10.3,1H2V0H12z" />
+            </svg>
+          </div>
         </a>
       </div>
     </div>
@@ -50,13 +54,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/_base/breakpoints';
+
 p {
+  position: relative;
   margin-bottom: 1rem;
 }
 
 a {
   display: inline-flex;
   align-items: center;
+  margin-top: 1rem;
 
   p {
     margin-right: 0.5rem;
@@ -68,26 +76,8 @@ a {
     width: 12px;
     height: 12px;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0.625rem;
-      height: 0.625rem;
-      border-top: 1px solid var(--white);
-      border-right: 1px solid var(--white);
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0.95rem;
-      border-top: 1px solid var(--white);
-      transform: rotate(-45deg);
-      transform-origin: 100% 0%;
+    svg {
+      fill: var(--white);
     }
   }
 }
@@ -119,12 +109,17 @@ a {
     right: 0;
     height: 100vh;
     width: 100%;
-    max-width: 400px;
+    max-width: 480px;
     padding: 1.25rem;
     background: var(--blue);
+    background: linear-gradient(135deg, var(--blue) 0%, #c300ff 90%);
     color: var(--white);
     box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.6);
     font-size: 0.875rem;
+
+    @include breakpoints.respond(md) {
+      font-size: 1rem;
+    }
 
     .close-container {
       display: flex;
@@ -135,10 +130,6 @@ a {
       margin-bottom: 1rem;
 
       p {
-        // font-family: 'Sohne Breit', sans-serif;
-        // text-transform: uppercase;
-        // font-size: 0.625rem;
-        // letter-spacing: 2px;
         margin: 0;
       }
 
@@ -180,6 +171,18 @@ a {
         }
       }
     }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--blue);
+      background: linear-gradient(315deg, var(--blue) 0%, #c300ff 90%);
+      animation: bg-fade 4s infinite alternate ease-in-out;
+    }
   }
 }
 
@@ -211,6 +214,15 @@ a {
     transform: translate3d(100%, 0, 0);
     transition: transform 0.5s cubic-bezier(0.32, 0, 0.67, 0);
     transition-delay: 0s;
+  }
+}
+
+@keyframes bg-fade {
+  0% {
+    opacity: 80%;
+  }
+  100% {
+    opacity: 20%;
   }
 }
 </style>
