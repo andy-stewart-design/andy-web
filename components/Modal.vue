@@ -27,9 +27,7 @@
         <a href="mailto:andy.stewart1170@gmail.com">
           <p>Get in Touch</p>
           <div class="arrow">
-            <svg viewBox="0 0 12 12">
-              <path d="M12,0v10h-1V1.7L0.9,11.9l-0.7-0.7L10.3,1H2V0H12z" />
-            </svg>
+            <icon-base width="12" height="12"><arrow-out /></icon-base>
           </div>
         </a>
       </div>
@@ -38,8 +36,15 @@
 </template>
 
 <script>
+import IconBase from '@/components/IconBase'
+import ArrowOut from '@/components/icons/ArrowOut'
+
 export default {
   name: 'Modal',
+  components: {
+    IconBase,
+    ArrowOut,
+  },
   data() {
     return {
       showModal: true,
@@ -177,6 +182,10 @@ a {
 .fade-leave-active {
   transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: 0;
+
+  .overlay {
+    pointer-events: none;
+  }
 
   .modal {
     transform: translate3d(0%, 0, 0);

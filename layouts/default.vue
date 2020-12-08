@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue'
+import NavBar from '@/components/NavBar'
 import Modal from '@/components/Modal'
 
 export default {
