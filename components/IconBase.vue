@@ -1,25 +1,10 @@
 <template>
   <div>
     <svg
-      v-if="viewbox == 24"
       xmlns="http://www.w3.org/2000/svg"
       :width="size"
       :height="size"
-      viewBox="0 0 24 24"
-      :aria-labelledby="iconName"
-      role="presentation"
-    >
-      <title :id="iconName" lang="en">{{ iconName }} icon</title>
-      <g :fill="iconColor">
-        <slot />
-      </g>
-    </svg>
-    <svg
-      v-else-if="viewbox == 32"
-      xmlns="http://www.w3.org/2000/svg"
-      :width="size"
-      :height="size"
-      viewBox="0 0 32 32"
+      :viewBox="viewBoxString"
       :aria-labelledby="iconName"
       role="presentation"
     >
@@ -49,6 +34,11 @@ export default {
     iconColor: {
       type: String,
       default: 'currentColor',
+    },
+  },
+  computed: {
+    viewBoxString() {
+      return `0 0 ${this.viewbox} ${this.viewbox}`
     },
   },
 }
