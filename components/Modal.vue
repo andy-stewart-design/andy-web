@@ -27,7 +27,7 @@
         <a href="mailto:andy.stewart1170@gmail.com">
           <p>Get in Touch</p>
           <div class="arrow">
-            <icon-base width="12" height="12"><arrow-out /></icon-base>
+            <icon-base size="12"><arrow-out /></icon-base>
           </div>
         </a>
       </div>
