@@ -23,18 +23,18 @@
         x2="1129.2375"
         y2="929.423"
       >
-        <stop offset="0" style="stop-color: #3232ff">
+        <stop offset="0" style="stop-color: #5e32ff">
           <animate
             attributeName="stop-color"
-            values="#3232ff; #c300ff; #3232ff"
+            values="#5e32ff; #ff00ff; #5e32ff"
             dur="6s"
             repeatCount="indefinite"
           ></animate>
         </stop>
-        <stop offset="0.3" style="stop-color: #c300ff">
+        <stop offset="0.3" style="stop-color: #ff00ff">
           <animate
             attributeName="stop-color"
-            values="#c300ff; #3232ff; #c300ff"
+            values="#ff00ff; #5e32ff; #ff00ff"
             dur="8s"
             repeatCount="indefinite"
           ></animate>
@@ -45,10 +45,10 @@
             repeatCount="indefinite"
           ></animate>
         </stop>
-        <stop offset="0.7" style="stop-color: #c300ff">
+        <stop offset="0.7" style="stop-color: #ff00ff">
           <animate
             attributeName="stop-color"
-            values="#c300ff; #3232ff; #c300ff"
+            values="#ff00ff; #5e32ff; #ff00ff"
             dur="6s"
             repeatCount="indefinite"
           ></animate>
@@ -59,10 +59,10 @@
             repeatCount="indefinite"
           ></animate>
         </stop>
-        <stop offset="1" style="stop-color: #3232ff">
+        <stop offset="1" style="stop-color: #5e32ff">
           <animate
             attributeName="stop-color"
-            values="#3232ff; #c300ff; #3232ff"
+            values="#5e32ff; #ff00ff; #5e32ff"
             dur="8s"
             repeatCount="indefinite"
           ></animate>

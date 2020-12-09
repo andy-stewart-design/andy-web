@@ -1,7 +1,7 @@
 @use '_base/reset';
 @use '_base/fonts';
 @use '_base/variables';
-@use '_base/breakpoints';
+@use '_base/mixins';
 
 body {
   background: var(--black);

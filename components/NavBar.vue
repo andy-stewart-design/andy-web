@@ -1,13 +1,13 @@
 <template>
   <nav class="nav">
-    <nuxt-link :to="{ name: 'index' }" class="logo">
-      <Logo class="LogoMark" />
+    <nuxt-link :to="{ name: 'index' }" class="logo-mark-container">
+      <Logo class="logo-mark" />
     </nuxt-link>
     <div class="trigger" @click="toggleModal">
       <icon-base viewbox="32" size="32"><hamburger /></icon-base>
     </div>
-    <p class="LogoType TypeTop">Andy Stew—</p>
-    <p class="LogoType TypeBot">—Art Design</p>
+    <p class="logo-type type-top">Andy Stew—</p>
+    <p class="logo-type type-bot">—Art Design</p>
   </nav>
 </template>
 
@@ -32,92 +32,87 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@use '@/assets/_base/breakpoints';
+@use '@/assets/_base/mixins';
 
 nav {
-  .logo {
+  --nav-position: 1rem;
+
+  @mixin nav-top-styles {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
     width: 2.5rem;
     height: 2.5rem;
-    z-index: 100000;
+    z-index: 100;
+    color: var(--white);
 
-    @include breakpoints.respond(landscape) {
+    @include mixins.respond(landscape) {
       width: 3rem;
       height: 3rem;
     }
+  }
 
-    .LogoMark {
+  .logo-mark-container {
+    @include nav-top-styles;
+    top: var(--nav-position);
+    left: var(--nav-position);
+
+    .logo-mark {
       width: 100%;
-      fill: var(--white);
-      transition: fill 0.25s;
+      fill: currentColor;
     }
   }
-  .trigger {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    padding: 0.25rem;
-    z-index: 100000;
-    color: var(--white);
 
-    @include breakpoints.respond(landscape) {
-      padding: 0.5rem;
-    }
+  .trigger {
+    @include nav-top-styles;
+    @include mixins.flex-center;
+    top: var(--nav-position);
+    right: var(--nav-position);
 
     &:hover {
       cursor: pointer;
     }
   }
 
-  .LogoType {
+  .logo-type {
     position: fixed;
-    font-family: 'Sohne Breit', sans-serif;
+    font-family: var(--sans-wide);
     text-transform: uppercase;
-    font-size: 0.875rem;
+    text-align: center;
+    font-size: var(--text-sm);
     letter-spacing: 3px;
     color: var(--white);
     width: 100%;
-    text-align: center;
-    z-index: 10000;
+    z-index: 99;
 
-    .dash {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: bold;
+    @include mixins.respond(landscape) {
+      font-size: var(--text-base);
     }
-  }
 
-  @include breakpoints.respond(landscape) {
-    font-size: 1rem;
-  }
+    &.type-top {
+      left: 0;
+      top: 1.5rem;
 
-  .TypeTop {
-    left: 0;
-    top: 1.5rem;
-    // border: 1px solid blue;
-
-    @include breakpoints.respond(landscape) {
-      top: 0;
-      transform: rotate(90deg) translateY(-240%);
-      transform-origin: 0 0;
-      width: 100vh;
+      @include mixins.respond(landscape) {
+        top: 0;
+        transform: rotate(90deg) translateY(-220%);
+        transform-origin: 0 0;
+        width: 100vh;
+      }
     }
-  }
 
-  .TypeBot {
-    left: 0;
-    bottom: 1.5rem;
-    // border: 1px solid blue;
+    &.type-bot {
+      left: 0;
+      bottom: 1.5rem;
+      // border: 1px solid blue;
 
-    @include breakpoints.respond(landscape) {
-      top: 0;
-      bottom: auto;
-      left: auto;
-      right: 0;
-      transform: rotate(-90deg) translateY(-240%);
-      transform-origin: 100% 0;
-      width: 100vh;
+      @include mixins.respond(landscape) {
+        top: 0;
+        bottom: auto;
+        left: auto;
+        right: 0;
+        transform: rotate(-90deg) translateY(-220%);
+        transform-origin: 100% 0;
+        width: 100vh;
+      }
     }
   }
 }

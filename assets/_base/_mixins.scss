@@ -1,3 +1,5 @@
+// breakpoints
+
 @mixin respond ($breakpoint) {
   
   @if $breakpoint==sm {
@@ -47,4 +49,12 @@
       @content;
     }
   }
+}
+
+// Layout
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

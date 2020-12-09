@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@use '@/assets/_base/breakpoints';
+@use '@/assets/_base/mixins';
 
 p {
   position: relative;
@@ -116,12 +116,12 @@ a {
     width: 100%;
     max-width: 480px;
     padding: 1.25rem;
-    background: #5e32ff;
+    background: var(--blue);
     color: var(--white);
     box-shadow: -1px 0px 15px 0px rgba(0, 0, 0, 0.6);
     font-size: 0.875rem;
 
-    @include breakpoints.respond(md) {
+    @include mixins.respond(md) {
       font-size: 1rem;
     }
 

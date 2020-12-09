@@ -1,8 +1,19 @@
 :root {
   --black: #000;
   --white: #FFF;
-  --blue: #3232ff;
+  --blue:#5e32ff;
+  --magenta: #ff00ff;
+
+  --sans-book: 'Sohne Book', "Helvetica Neue", Arial, sans-serif;
+  --sans-bold: 'Sohne Bold', "Helvetica Neue", Arial, sans-serif;
+  --sans-wide: 'Sohne Breit', "Helvetica Neue", Arial, sans-serif;
+
+  --text-xs: .75rem;
+  --text-sm: .875rem;
+  --text-base: 1rem;
 
   -moz-tab-size: 4;
   tab-size: 4;
+
+  font-size: 16px;
 }
