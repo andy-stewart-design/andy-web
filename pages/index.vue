@@ -87,7 +87,7 @@ export default {
       font-size: var(--text-xs);
       text-align: center;
       letter-spacing: 0.1px;
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--white800);
       width: 80%;
 
       @include mixins.respond(landscape) {

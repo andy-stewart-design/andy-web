@@ -1,12 +1,14 @@
 :root {
   --black: #000;
   --white: #FFF;
+  --white800: rgba(255, 255, 255, .8);
   --blue:#5e32ff;
   --magenta: #ff00ff;
 
   --sans-book: 'Sohne Book', "Helvetica Neue", Arial, sans-serif;
   --sans-bold: 'Sohne Bold', "Helvetica Neue", Arial, sans-serif;
   --sans-wide: 'Sohne Breit', "Helvetica Neue", Arial, sans-serif;
+  --sans-cond: 'Sohne Schmal', impact, sans-serif;
 
   --text-xs: .75rem;
   --text-sm: .875rem;

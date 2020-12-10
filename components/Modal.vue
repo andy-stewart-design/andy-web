@@ -142,31 +142,9 @@ a {
         cursor: pointer;
         transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 
-        // &::before,
-        // &::after {
-        //   content: '';
-        //   position: absolute;
-        //   top: 50%;
-        //   left: 50%;
-        //   width: 1rem;
-        //   height: 1px;
-        //   background: var(--white);
-        //   transform: translate3d(-50%, -50%, 0) rotate(45deg);
-        //   transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-        // }
-
-        &::after {
-          transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-        }
-
         &:hover {
           background: rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.6);
-
-          &::before,
-          &::after {
-            transform: translate3d(-50%, -50%, 0) rotate(90deg);
-          }
         }
       }
     }

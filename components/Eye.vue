@@ -106,12 +106,12 @@
   display: block;
 
   .text text {
-    font-family: 'Sohne Schmal', sans-serif;
+    font-family: var(--sans-cond);
     text-transform: uppercase;
     color: white;
     font-size: 370px;
     text-align: center;
-    fill: #fff;
+    fill: var(--white);
   }
 
   .image path {
