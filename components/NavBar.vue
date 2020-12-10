@@ -1,9 +1,9 @@
 <template>
   <nav class="nav">
-    <nuxt-link :to="{ name: 'index' }" class="logo-mark-container">
+    <nuxt-link :to="{ name: 'index' }" class="logo-mark-container nav-top">
       <Logo class="logo-mark" />
     </nuxt-link>
-    <div class="trigger" @click="toggleModal">
+    <div class="trigger nav-top" @click="toggleModal">
       <icon-base viewbox="32" size="32"><hamburger /></icon-base>
     </div>
     <p class="logo-type type-top">Andy Stew—</p>
@@ -12,17 +12,8 @@
 </template>
 
 <script>
-import Logo from '@/components/Logo'
-import IconBase from '@/components/IconBase'
-import Hamburger from '@/components/icons/Hamburger'
-
 export default {
   name: 'NavBar',
-  components: {
-    Logo,
-    IconBase,
-    Hamburger,
-  },
   methods: {
     toggleModal() {
       this.$emit('toggle-modal')
@@ -50,25 +41,36 @@ nav {
     }
   }
 
-  .logo-mark-container {
-    @include nav-top-styles;
-    top: var(--nav-position);
-    left: var(--nav-position);
+  .nav-top {
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: 100;
+    color: var(--white);
 
-    .logo-mark {
-      width: 100%;
-      fill: currentColor;
+    @include mixins.respond(landscape) {
+      width: 3rem;
+      height: 3rem;
     }
-  }
 
-  .trigger {
-    @include nav-top-styles;
-    @include mixins.flex-center;
-    top: var(--nav-position);
-    right: var(--nav-position);
+    &.logo-mark-container {
+      top: var(--nav-position);
+      left: var(--nav-position);
 
-    &:hover {
-      cursor: pointer;
+      .logo-mark {
+        width: 100%;
+        fill: currentColor;
+      }
+    }
+
+    &.trigger {
+      @include mixins.flex-center;
+      top: var(--nav-position);
+      right: var(--nav-position);
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

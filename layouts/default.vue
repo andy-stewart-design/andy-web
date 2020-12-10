@@ -7,14 +7,7 @@
 </template>
 
 <script>
-import NavBar from '@/components/NavBar'
-import Modal from '@/components/Modal'
-
 export default {
-  components: {
-    NavBar,
-    Modal,
-  },
   data() {
     return {
       modalActive: false,
@@ -27,5 +20,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss"></style>

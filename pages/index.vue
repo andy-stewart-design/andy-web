@@ -17,12 +17,7 @@
 </template>
 
 <script>
-import Eye from '@/components/Eye'
-
 export default {
-  components: {
-    Eye,
-  },
   data() {
     return {
       title: 'The Graphic Design Portfolio of Andy Stewart',

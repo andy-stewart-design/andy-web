@@ -5,7 +5,9 @@
       <div class="modal">
         <div class="close-container">
           <p>About</p>
-          <div class="icon-close" @click="toggleModal"></div>
+          <div class="icon-close trigger" @click="toggleModal">
+            <icon-base viewbox="24" size="24"><close /></icon-base>
+          </div>
         </div>
         <p>
           I believe that design works on the mind through the eyes. In the right
@@ -36,15 +38,8 @@
 </template>
 
 <script>
-import IconBase from '@/components/IconBase'
-import ArrowOut from '@/components/icons/ArrowOut'
-
 export default {
   name: 'Modal',
-  components: {
-    IconBase,
-    ArrowOut,
-  },
   data() {
     return {
       showModal: true,
@@ -138,6 +133,7 @@ a {
       }
 
       .icon-close {
+        @include mixins.flex-center;
         position: relative;
         width: 2.5rem;
         height: 2.5rem;
@@ -146,25 +142,24 @@ a {
         cursor: pointer;
         transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 1rem;
-          height: 1px;
-          background: var(--white);
-          transform: translate3d(-50%, -50%, 0) rotate(45deg);
-          transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
-        }
+        // &::before,
+        // &::after {
+        //   content: '';
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 50%;
+        //   width: 1rem;
+        //   height: 1px;
+        //   background: var(--white);
+        //   transform: translate3d(-50%, -50%, 0) rotate(45deg);
+        //   transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+        // }
 
         &::after {
           transform: translate3d(-50%, -50%, 0) rotate(-45deg);
         }
 
         &:hover {
-          transform: rotate(90deg);
           background: rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 1px 8px 0px rgba(0, 0, 0, 0.6);
 

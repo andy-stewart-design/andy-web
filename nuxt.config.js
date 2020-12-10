@@ -1,4 +1,6 @@
 export default {
+  components: true,
+
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
