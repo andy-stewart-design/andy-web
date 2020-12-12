@@ -35,6 +35,8 @@ export default {
     '@nuxtjs/eslint-module',
   ],
 
+  generate: { fallback: '404.html' },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [],
 
