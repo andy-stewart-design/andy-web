@@ -59,6 +59,7 @@ export default {}
     font-family: var(--sans-wide);
     font-size: var(--text-lg);
     text-align: center;
+    margin-top: var(--m-base);
     margin-bottom: var(--m-base);
 
     @include mixins.respond(landscape) {
