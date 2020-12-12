@@ -80,7 +80,7 @@ nav {
     text-transform: uppercase;
     text-align: center;
     font-size: var(--text-sm);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: var(--white);
     width: 100%;
     z-index: 99;
