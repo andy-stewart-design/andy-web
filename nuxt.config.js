@@ -1,6 +1,4 @@
 export default {
-  components: true,
-
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
@@ -38,7 +36,7 @@ export default {
   generate: { fallback: '404.html' },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxt/content'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
