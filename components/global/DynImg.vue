@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>My dynamic image below</p>
     <img :src="dynamicImage" />
   </div>
 </template>
