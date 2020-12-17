@@ -7,7 +7,7 @@
         :key="article.slug"
         class="article-container"
       >
-        <NuxtLink :to="`words/${article.slug}`" class="content-container">
+        <NuxtLink :to="`/words/${article.slug}`" class="content-container">
           <!-- <img :src="article.img" /> -->
           <div class="text">
             <div class="title-container">
