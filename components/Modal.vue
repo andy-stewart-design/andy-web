@@ -32,6 +32,11 @@
             <icon-base size="12"><arrow-out /></icon-base>
           </div>
         </a>
+        <div @click="toggleModal">
+          <nuxt-link :to="{ name: 'words' }" class="words-link">
+            <p>Words</p>
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </transition>
@@ -55,6 +60,10 @@ export default {
 
 <style scoped lang="scss">
 @use '@/assets/_base/mixins';
+
+// .words-link {
+//   opacity: 0;
+// }
 
 p {
   position: relative;
