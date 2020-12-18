@@ -3,7 +3,7 @@ title: Set and Setting
 description: How I'm doing right now.
 ---
 
-# And so it begins
+## And so it begins
 
 Welcome to my first blog post using content module
 

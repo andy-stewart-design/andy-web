@@ -17,7 +17,7 @@
             <p>{{ article.description }}</p>
           </div>
           <div class="arrow">
-            <icon-base size="40"><arrow-out /></icon-base>
+            <icon-base size="32" viewbox="32"><arrow-right /></icon-base>
           </div>
         </NuxtLink>
       </li>
@@ -63,6 +63,7 @@ div.articles-container {
   li.article-container {
     width: 100%;
     border-bottom: 1px solid var(--white);
+    transition: background 0.375s cubic-bezier(0.22, 1, 0.36, 1);
 
     &:first-of-type {
       border-top: 1px solid var(--white);
@@ -75,6 +76,7 @@ div.articles-container {
 
       .text {
         flex: 1;
+        transition: transform 0.375s cubic-bezier(0.22, 1, 0.36, 1);
 
         .title-container {
           display: flex;
@@ -103,12 +105,23 @@ div.articles-container {
         display: flex;
         align-items: center;
         width: 3rem;
+        transition: transform 0.375s cubic-bezier(0.22, 1, 0.36, 1);
       }
     }
 
     &:hover {
-      h2.title {
-        color: var(--blue);
+      background: rgba(94, 50, 255, 0.2);
+
+      .text {
+        transform: translateX(1.5rem);
+
+        h2.title {
+          color: var(--blue);
+        }
+      }
+
+      .arrow {
+        transform: translateX(-1.5rem);
       }
     }
   }
