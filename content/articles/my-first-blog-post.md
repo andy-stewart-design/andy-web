@@ -1,9 +1,11 @@
 ---
 title: My first Blog Post
 description: Learning how to use @nuxt/content to create a blog.
+img: my-first-blog-post-01.jpg
+tag: Design
 ---
 
-## My first blog post
+##### My first blog post
 
 Welcome to my first blog post using content module
 

@@ -11,9 +11,47 @@
 }
 
 body {
+  position: relative;
   background: var(--black);
   color: var(--white); 
 }
+
+// body::after {
+//   /* Change the `height` parameter here to match your base line-height. */
+//   background: url('data:image/svg+xml;utf8,<svg height="1.5rem" width="1" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="0.5" style="fill:rgba(0, 255, 255, 0.5)" /></svg>') repeat top left;
+  
+//   content: "";
+//   display: block;
+//   pointer-events: none;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 9999;
+//   position: absolute;
+//   height: 1000rem;
+// }
+
+// body::before {
+//   /* Change the `height` parameter here to match your base line-height. */
+//   background: url('data:image/svg+xml;utf8,<svg height="1.5rem" width="1" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="0.5" style="fill:rgba(0, 255, 255, 0.325)" /></svg>') repeat top left;
+  
+//   content: "";
+//   display: block;
+//   pointer-events: none;
+//   top: .75rem;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 9999;
+//   position: absolute;
+//   height: 1000rem;
+// }
+
+// body:active::after,
+// body:active::before {
+//   display: none;
+// }
 
 
 

@@ -8,7 +8,6 @@
         class="article-container"
       >
         <NuxtLink :to="`/words/${article.slug}`" class="content-container">
-          <!-- <img :src="article.img" /> -->
           <div class="text">
             <div class="title-container">
               <h2 class="title">{{ article.title }}</h2>
@@ -70,11 +69,13 @@ div.articles-container {
     }
 
     .content-container {
+      position: relative;
       display: flex;
       justify-content: space-between;
       padding: 1.5rem 0;
 
       .text {
+        position: relative;
         flex: 1;
         transition: transform 0.375s cubic-bezier(0.22, 1, 0.36, 1);
 
@@ -86,7 +87,7 @@ div.articles-container {
 
           h2.title {
             font-family: var(--sans-wide);
-            font-size: var(--text-lg);
+            font-size: var(--text-xl);
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-right: 1rem;
@@ -111,6 +112,10 @@ div.articles-container {
 
     &:hover {
       background: rgba(94, 50, 255, 0.2);
+
+      img.img-bg {
+        opacity: 0.5;
+      }
 
       .text {
         transform: translateX(1.5rem);
