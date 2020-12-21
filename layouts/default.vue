@@ -3,6 +3,7 @@
     <nav-bar @toggle-modal="toggleModal" />
     <modal v-show="modalActive" @toggle-modal="toggleModal" />
     <Nuxt />
+    <!-- <grid /> -->
   </div>
 </template>
 

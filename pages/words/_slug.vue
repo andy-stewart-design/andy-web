@@ -1,24 +1,26 @@
 <template>
-  <article class="post">
-    <div class="hero">
-      <h1 class="post-title">{{ article.title }}</h1>
-      <p class="post-descr">
-        {{ article.description }}
-      </p>
-      <div class="post-meta">
-        <p class="post-tag">{{ article.tag }}</p>
-        <span class="post-updated"> {{ formatDate(article.createdAt) }}</span>
+  <div class="grid-container">
+    <article class="post">
+      <div class="hero">
+        <h1 class="post-title">{{ article.title }}</h1>
+        <p class="post-descr">
+          {{ article.description }}
+        </p>
+        <div class="post-meta">
+          <p class="post-tag">{{ article.tag }}</p>
+          <span class="post-updated"> {{ formatDate(article.createdAt) }}</span>
+        </div>
+        <img
+          v-if="article.img"
+          class="hero-img"
+          :src="require(`~/assets/img/blog/${article.img}`)"
+          :alt="article.alt"
+        />
       </div>
-      <img
-        v-if="article.img"
-        class="hero-img"
-        :src="require(`~/assets/img/blog/${article.img}`)"
-        :alt="article.alt"
-      />
-    </div>
 
-    <nuxt-content :document="article" />
-  </article>
+      <nuxt-content :document="article" />
+    </article>
+  </div>
 </template>
 
 <script>
@@ -37,119 +39,141 @@ export default {
 </script>
 
 <style lang="scss">
-article.post {
-  div.hero {
-    position: relative;
-    max-width: 680px;
-    margin: 0 auto;
-    padding-top: calc(var(--type-baseline) * 7.5);
-    // width: 100vw;
-    // height: 90vh;
+@use '@/assets/_base/mixins';
 
-    h1.post-title {
-      position: relative;
-      font-family: var(--sans-wide);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: var(--text-2xl);
-      line-height: calc(var(--type-baseline) * 4);
-      margin-bottom: calc(var(--type-baseline) * 1);
-    }
+div.grid-container {
+  padding: 0 0.5rem;
 
-    p.post-descr {
-      line-height: calc(var(--type-baseline) * 2);
-      margin-bottom: 1.325rem;
-    }
-
-    div.post-meta {
-      position: relative;
-      align-items: center;
-      display: flex;
-      margin-bottom: calc(var(--type-baseline) * 2.75);
-
-      p.post-tag {
-        border-radius: 10rem;
-        margin-right: 1rem;
-        font-family: var(--sans-bold);
-        font-size: var(--text-sm);
-        letter-spacing: 0.25px;
-        margin-top: 0.075rem;
-        padding: 0.25rem 0.875rem;
-        background-color: var(--blue);
-      }
-
-      .post-updated {
-        opacity: 0.6;
-      }
-    }
-
-    .hero-img {
-      margin-bottom: calc(var(--type-baseline) * 4);
-    }
+  @include mixins.respond(md) {
+    padding: 0 4.25rem;
   }
 
-  .nuxt-content {
-    max-width: 680px;
-    margin: auto;
+  article.post {
+    padding: 0 0.5rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: calc(var(--type-baseline) * 12.5);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: var(--sans-bold);
-      font-weight: 700;
+    @include mixins.respond(md) {
+      width: calc(10 / 12 * 100%);
+      padding: 0 0.75rem;
+      padding-top: calc(var(--type-baseline) * 9.5);
     }
 
-    h1 {
-      font-size: var(--text-5xl);
-      line-height: calc(var(--type-baseline) * 6);
-      margin-top: calc(var(--type-baseline) * -0.5);
-      margin-bottom: calc(var(--type-baseline) * 2.5);
+    @include mixins.respond(xl) {
+      width: calc(8 / 12 * 100%);
+      padding: 0 0.75rem;
+      padding-top: calc(var(--type-baseline) * 9.5);
     }
 
-    h2 {
-      font-size: var(--text-4xl);
-      line-height: calc(var(--type-baseline) * 6);
-      margin-top: calc(var(--type-baseline) * 2);
-      margin-bottom: calc(var(--type-baseline) * 2);
+    div.hero {
+      position: relative;
+      width: 100%;
+
+      h1.post-title {
+        position: relative;
+        font-family: var(--sans-wide);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: var(--text-2xl);
+        line-height: calc(var(--type-baseline) * 4);
+        margin-bottom: calc(var(--type-baseline) * 1);
+      }
+
+      p.post-descr {
+        line-height: calc(var(--type-baseline) * 2);
+        margin-bottom: 1.325rem;
+      }
+
+      div.post-meta {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: calc(var(--type-baseline) * 2.75);
+
+        p.post-tag {
+          border-radius: 10rem;
+          margin-right: 1rem;
+          font-family: var(--sans-bold);
+          font-size: var(--text-sm);
+          letter-spacing: 0.25px;
+          margin-top: 0.075rem;
+          padding: 0.25rem 0.875rem;
+          background-color: var(--blue);
+        }
+
+        .post-updated {
+          opacity: 0.6;
+        }
+      }
+
+      .hero-img {
+        margin-bottom: calc(var(--type-baseline) * 4);
+      }
     }
 
-    h3 {
-      font-size: var(--text-3xl);
-      line-height: calc(var(--type-baseline) * 5);
-      margin-top: calc(var(--type-baseline) * 1);
-      margin-bottom: calc(var(--type-baseline) * 2);
-    }
+    .nuxt-content {
+      width: 100%;
 
-    h4 {
-      font-size: var(--text-2xl);
-      line-height: calc(var(--type-baseline) * 4);
-      margin-top: calc(var(--type-baseline) * 2);
-      margin-bottom: calc(var(--type-baseline) * 2);
-    }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--sans-bold);
+        font-weight: 700;
+      }
 
-    h5 {
-      font-size: var(--text-xl);
-      line-height: calc(var(--type-baseline) * 3);
-      margin-top: calc(var(--type-baseline) * 2);
-      margin-bottom: calc(var(--type-baseline) * 2);
-    }
+      h1 {
+        font-size: var(--text-5xl);
+        line-height: calc(var(--type-baseline) * 6);
+        margin-top: calc(var(--type-baseline) * -0.5);
+        margin-bottom: calc(var(--type-baseline) * 2.5);
+      }
 
-    h6 {
-      font-size: var(--text-lg);
-      line-height: calc(var(--type-baseline) * 3);
-      margin-bottom: calc(var(--type-baseline) * 2);
-    }
+      h2 {
+        font-size: var(--text-4xl);
+        line-height: calc(var(--type-baseline) * 6);
+        margin-top: calc(var(--type-baseline) * 2);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
 
-    p {
-      line-height: calc(var(--type-baseline) * 2);
-      margin-bottom: calc(var(--type-baseline) * 2);
-    }
+      h3 {
+        font-size: var(--text-3xl);
+        line-height: calc(var(--type-baseline) * 5);
+        margin-top: calc(var(--type-baseline) * 1);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
 
-    img {
-      margin: calc(var(--type-baseline) * 4) 0;
+      h4 {
+        font-size: var(--text-2xl);
+        line-height: calc(var(--type-baseline) * 4);
+        margin-top: calc(var(--type-baseline) * 2);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
+
+      h5 {
+        font-size: var(--text-xl);
+        line-height: calc(var(--type-baseline) * 3);
+        margin-top: calc(var(--type-baseline) * 2);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
+
+      h6 {
+        font-size: var(--text-lg);
+        line-height: calc(var(--type-baseline) * 3);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
+
+      p {
+        line-height: calc(var(--type-baseline) * 2);
+        margin-bottom: calc(var(--type-baseline) * 2);
+      }
+
+      img {
+        margin: calc(var(--type-baseline) * 4) 0;
+      }
     }
   }
 }
