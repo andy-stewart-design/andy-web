@@ -41,6 +41,15 @@ export default {
 <style lang="scss">
 @use '@/assets/_base/mixins';
 
+@font-face {
+  font-family: 'Vesterbro poster';
+  src: url('https://assets.website-files.com/5e9d939b6c7f32259d33c1cc/5e9d939b6c7f3233ba33c248_Vesterbro-Poster.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
 div.grid-container {
   padding: 0 0.5rem;
 
@@ -53,17 +62,21 @@ div.grid-container {
     width: 100%;
     margin: 0 auto;
     padding-top: calc(var(--type-baseline) * 12.5);
+    max-width: 42rem;
+    hyphens: auto;
 
     @include mixins.respond(md) {
-      width: calc(10 / 12 * 100%);
+      width: 100%;
       padding: 0 0.75rem;
       padding-top: calc(var(--type-baseline) * 9.5);
     }
 
-    @include mixins.respond(xl) {
+    @include mixins.respond(lg) {
+      width: calc(10 / 12 * 100%);
+    }
+
+    @include mixins.respond(2xl) {
       width: calc(8 / 12 * 100%);
-      padding: 0 0.75rem;
-      padding-top: calc(var(--type-baseline) * 9.5);
     }
 
     div.hero {
@@ -75,7 +88,7 @@ div.grid-container {
         font-family: var(--sans-wide);
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: var(--text-2xl);
+        font-size: var(--text-xl);
         line-height: calc(var(--type-baseline) * 4);
         margin-bottom: calc(var(--type-baseline) * 1);
       }
@@ -128,15 +141,18 @@ div.grid-container {
       h1 {
         font-size: var(--text-5xl);
         line-height: calc(var(--type-baseline) * 6);
-        margin-top: calc(var(--type-baseline) * -0.5);
-        margin-bottom: calc(var(--type-baseline) * 2.5);
+        margin-top: calc(var(--type-baseline) * 2.25);
+        margin-bottom: calc(var(--type-baseline) * 2.75);
       }
 
       h2 {
+        font-family: var(--sans-cond);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
         font-size: var(--text-4xl);
-        line-height: calc(var(--type-baseline) * 6);
-        margin-top: calc(var(--type-baseline) * 2);
-        margin-bottom: calc(var(--type-baseline) * 2);
+        line-height: calc(var(--type-baseline) * 5);
+        margin-top: calc(var(--type-baseline) * 2.25);
+        margin-bottom: calc(var(--type-baseline) * 2.75);
       }
 
       h3 {
@@ -154,6 +170,7 @@ div.grid-container {
       }
 
       h5 {
+        font-family: var(--sans-wide);
         font-size: var(--text-xl);
         line-height: calc(var(--type-baseline) * 3);
         margin-top: calc(var(--type-baseline) * 2);
@@ -161,14 +178,34 @@ div.grid-container {
       }
 
       h6 {
+        font-family: var(--sans-wide);
         font-size: var(--text-lg);
-        line-height: calc(var(--type-baseline) * 3);
+        line-height: calc(var(--type-baseline) * 2.5);
         margin-bottom: calc(var(--type-baseline) * 2);
       }
 
       p {
         line-height: calc(var(--type-baseline) * 2);
         margin-bottom: calc(var(--type-baseline) * 2);
+      }
+
+      blockquote {
+        position: relative;
+        padding-left: 2rem;
+        hyphens: none;
+
+        &::after {
+          content: '“';
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-family: var(--sans-cond);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-size: var(--text-4xl);
+          line-height: calc(var(--type-baseline) * 5);
+          color: var(--blue);
+        }
       }
 
       img {

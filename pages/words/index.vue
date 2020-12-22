@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <div class="articles-container">
-      <h1 class="articles-head">Thoughts</h1>
+      <h1 class="articles-head">Thinking out loud</h1>
       <ul>
         <li
           v-for="article of articles"
@@ -31,7 +31,7 @@ export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
       .only(['title', 'description', 'img', 'slug', 'createdAt'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <nav-bar @toggle-modal="toggleModal" />
+    <nav-bar
+      :class="$nuxt.$route.path === '/' ? 'home' : ''"
+      @toggle-modal="toggleModal"
+    />
     <modal v-show="modalActive" @toggle-modal="toggleModal" />
     <Nuxt />
     <!-- <grid /> -->

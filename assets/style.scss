@@ -10,6 +10,12 @@
   opacity: 0;
 }
 
+:root {
+  @include mixins.respond(md) {
+    font-size: 18px;
+  }
+}
+
 body {
   position: relative;
   background: var(--black);
