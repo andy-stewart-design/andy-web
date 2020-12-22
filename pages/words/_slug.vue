@@ -8,7 +8,7 @@
         </p>
         <div class="post-meta">
           <p class="post-tag">{{ article.tag }}</p>
-          <span class="post-updated"> {{ formatDate(article.createdAt) }}</span>
+          <span class="post-updated"> {{ formatDate(article.published) }}</span>
         </div>
         <img
           v-if="article.img"

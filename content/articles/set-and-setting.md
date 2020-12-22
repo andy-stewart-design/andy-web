@@ -2,6 +2,7 @@
 title: Set and Setting
 description: How I'm doing right now.
 tag: Design
+published: 2020-12-18T01:22:39.833Z
 ---
 
 ###### And so it begins

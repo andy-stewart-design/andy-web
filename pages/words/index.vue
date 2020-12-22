@@ -12,7 +12,7 @@
             <div class="text">
               <div class="title-container">
                 <h2 class="title">{{ article.title }}</h2>
-                <p class="date">{{ formatDate(article.createdAt) }}</p>
+                <p class="date">{{ formatDate(article.published) }}</p>
               </div>
               <p>{{ article.description }}</p>
             </div>
@@ -30,8 +30,8 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'createdAt'])
-      .sortBy('createdAt', 'desc')
+      .only(['title', 'description', 'img', 'slug', 'published'])
+      .sortBy('published', 'desc')
       .fetch()
 
     return {
