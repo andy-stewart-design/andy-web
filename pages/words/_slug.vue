@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     },
   },
@@ -82,6 +82,7 @@ div.grid-container {
     div.hero {
       position: relative;
       width: 100%;
+      margin-bottom: calc(var(--type-baseline) * 4);
 
       h1.post-title {
         position: relative;
@@ -102,17 +103,17 @@ div.grid-container {
         position: relative;
         display: flex;
         align-items: center;
-        margin-bottom: calc(var(--type-baseline) * 2.75);
+        margin-bottom: calc(var(--type-baseline) * 4);
+        font-size: var(--text-sm);
 
         p.post-tag {
           border-radius: 10rem;
           margin-right: 1rem;
           font-family: var(--sans-bold);
-          font-size: var(--text-sm);
           letter-spacing: 0.25px;
           margin-top: 0.075rem;
-          padding: 0.25rem 0.875rem;
-          background-color: var(--blue);
+          padding: 0.125rem 0.75rem;
+          background-color: rgba(94, 50, 255, 0.6);
         }
 
         .post-updated {
@@ -170,7 +171,7 @@ div.grid-container {
       }
 
       h5 {
-        font-family: var(--sans-wide);
+        font-family: var(--sans-bold);
         font-size: var(--text-xl);
         line-height: calc(var(--type-baseline) * 3);
         margin-top: calc(var(--type-baseline) * 2);
@@ -178,7 +179,7 @@ div.grid-container {
       }
 
       h6 {
-        font-family: var(--sans-wide);
+        font-family: var(--sans-bold);
         font-size: var(--text-lg);
         line-height: calc(var(--type-baseline) * 2.5);
         margin-bottom: calc(var(--type-baseline) * 2);

@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <div class="articles-container">
-      <h1 class="articles-head">Thinking out loud</h1>
+      <h1 class="articles-head">Thinking loudly</h1>
       <ul>
         <li
           v-for="article of articles"
@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      const options = { year: 'numeric', month: 'short', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     },
   },
@@ -63,7 +63,7 @@ div.grid-container {
     padding: 6rem 0.5rem;
 
     @include mixins.respond(md) {
-      padding: 6rem 0.75rem;
+      padding: 1.75rem 0.75rem;
     }
 
     h1.articles-head {
@@ -72,6 +72,10 @@ div.grid-container {
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 2rem;
+
+      @include mixins.respond(lg) {
+        margin-bottom: 5.25rem;
+      }
     }
 
     li.article-container {
@@ -118,13 +122,21 @@ div.grid-container {
               text-transform: uppercase;
               letter-spacing: 2px;
               margin-right: 1rem;
+              margin-bottom: 0.5rem;
               transition: color 0.25s;
+
+              @include mixins.respond(lg) {
+                margin-bottom: 0;
+              }
             }
 
             p.date {
               font-size: var(--text-sm);
-              margin-bottom: 0.2rem;
               opacity: 0.5;
+
+              @include mixins.respond(lg) {
+                margin-bottom: 0.4rem;
+              }
             }
           }
         }
@@ -134,7 +146,8 @@ div.grid-container {
           justify-content: flex-start;
           align-items: center;
           width: 2.5rem;
-          transition: transform 0.375s cubic-bezier(0.22, 1, 0.36, 1);
+          transition: transform 0.375s cubic-bezier(0.22, 1, 0.36, 1),
+            color 0.375s cubic-bezier(0.22, 1, 0.36, 1);
 
           @include mixins.respond(lg) {
             justify-content: flex-end;
@@ -159,6 +172,7 @@ div.grid-container {
 
         .arrow {
           transform: translateX(1.5rem);
+          color: var(--blue);
         }
       }
 
