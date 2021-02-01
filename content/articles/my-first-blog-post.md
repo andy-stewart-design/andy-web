@@ -4,6 +4,7 @@ description: Learning how to use @nuxt/content to create a blog.
 img: my-first-blog-post-01.jpg
 tag: Design
 published: 2020-12-15T01:22:39.833Z
+hidden: true
 ---
 
 ##### My first blog post

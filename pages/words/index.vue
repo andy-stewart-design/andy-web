@@ -7,12 +7,13 @@
           v-for="article of articles"
           :key="article.slug"
           class="article-container"
+          :class="{ hide: article.hidden }"
         >
           <NuxtLink :to="`/words/${article.slug}`" class="content-container">
             <div class="text">
               <div class="title-container">
                 <h2 class="title">{{ article.title }}</h2>
-                <p class="date">{{ formatDate(article.published) }}</p>
+                <p class="date">{{ article.tag }}</p>
               </div>
               <p>{{ article.description }}</p>
             </div>
@@ -30,7 +31,15 @@
 export default {
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'published'])
+      .only([
+        'title',
+        'description',
+        'img',
+        'tag',
+        'slug',
+        'published',
+        'hidden',
+      ])
       .sortBy('published', 'desc')
       .fetch()
 
@@ -85,6 +94,10 @@ div.grid-container {
 
       &:first-of-type {
         border-top: 1px solid var(--white);
+      }
+
+      &.hide {
+        display: none;
       }
 
       .content-container {
