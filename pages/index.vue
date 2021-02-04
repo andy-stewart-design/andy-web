@@ -2,7 +2,7 @@
   <div class="hero-container">
     <div class="above"></div>
     <div class="eye-container">
-      <Eye class="eye" />
+      <EyeNew class="eye" />
     </div>
     <div class="below">
       <p class="subhead">
