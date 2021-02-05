@@ -1,5 +1,5 @@
 <template>
-  <svg class="eye" viewBox="0 0 36 24">
+  <svg ref="eye" class="eye" viewBox="0 0 36 24">
     <g>
       <defs>
         <path
@@ -33,6 +33,17 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  mounted() {
+    const eye = this.$refs.eye
+    const pupils = eye.querySelectorAll('.pupilX')
+
+    console.log(pupils)
+  },
+}
+</script>
 
 <style scoped lang="scss">
 .eye {
