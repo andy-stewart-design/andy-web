@@ -49,8 +49,8 @@ nav {
     color: var(--white);
 
     @include mixins.respond(landscape) {
-      width: 3rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     &.logo-mark-container {
@@ -86,7 +86,7 @@ nav {
     z-index: 99;
 
     @include mixins.respond(landscape) {
-      font-size: var(--text-base);
+      font-size: 14px;
     }
 
     &.type-top {

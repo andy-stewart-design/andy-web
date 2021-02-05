@@ -1,16 +1,10 @@
 <template>
-  <svg class="eye" viewBox="0 0 36 30">
-    <text transform="matrix(1 0 0 1 3.7566 7.9906)" class="eye-text">
-      GRAPHIC
-    </text>
-    <text transform="matrix(1 0 0 1 6.4607 29.5329)" class="eye-text">
-      DESIGN
-    </text>
+  <svg class="eye" viewBox="0 0 36 24">
     <g>
       <defs>
         <path
           id="SVGID_1_"
-          d="M36,15c0,0-6,12-18,12S0,15,0,15S6,3,18,3S36,15,36,15z"
+          d="M36,12c0,0-6,12-18,12S0,12,0,12S6,0,18,0S36,12,36,12z"
         />
       </defs>
       <clipPath id="SVGID_2_">
@@ -27,15 +21,15 @@
         <stop offset="0" style="stop-color: #ff00ff" />
         <stop offset="1" style="stop-color: #0000ff" />
       </linearGradient>
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="1.5" />
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="3.5" />
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="5.5" />
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="7.5" />
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="9.5" />
-      <circle class="st0 pupilX pupilY" cx="18" cy="15" r="11.5" />
-      <circle class="st0 pupilX" cx="18" cy="15" r="13.5" />
-      <circle class="st0 pupilX" cx="18" cy="15" r="15.5" />
-      <circle class="st0 pupilX" cx="18" cy="15" r="17.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="1.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="3.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="5.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="7.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="9.5" />
+      <circle class="st0 pupilX pupilY" cx="18" cy="12" r="11.5" />
+      <circle class="st0 pupilX" cx="18" cy="12" r="13.5" />
+      <circle class="st0 pupilX" cx="18" cy="12" r="15.5" />
+      <circle class="st0 pupilX" cx="18" cy="12" r="17.5" />
     </g>
   </svg>
 </template>

@@ -60,11 +60,11 @@ export default {
 
     .eye {
       width: 95%;
-      height: 100%;
+      height: 90%;
       margin: auto;
 
       @include mixins.respond(landscape) {
-        width: 80%;
+        width: 60%;
       }
     }
   }
