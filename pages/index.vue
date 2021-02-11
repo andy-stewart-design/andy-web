@@ -8,7 +8,7 @@
       <p class="subhead">
         Andy Stewart is the
         <a href="https://turnstyle.studio/" target="_blank"
-          >Digital Creative Director This will be deleted</a
+          >Digital Creative Director</a
         >
         at&nbsp;Turnstyle
       </p>
