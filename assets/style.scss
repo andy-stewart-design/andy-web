@@ -16,6 +16,10 @@
   }
 }
 
+::selection {
+  background:var(--blue); /* WebKit/Blink Browsers */
+}
+
 body {
   position: relative;
   background: var(--black);

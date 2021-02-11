@@ -84,6 +84,7 @@ nav {
     color: var(--white);
     width: 100%;
     z-index: 99;
+    pointer-events: none;
 
     @include mixins.respond(landscape) {
       font-size: 14px;

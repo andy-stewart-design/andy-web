@@ -29,3 +29,10 @@
   src:  url('~assets/fonts/soehne-web-halbfett.woff2') format('woff2'),
         url('~assets/fonts/soehne-web-halbfett.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Sohne Med';
+  font-style: normal;
+  font-weight: 500;
+  src: url('~assets/fonts/soehne-test-kraftig.woff') format('woff');
+}
