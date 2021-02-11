@@ -1,13 +1,19 @@
 <template>
   <nav class="nav">
-    <nuxt-link :to="{ name: 'index' }" class="logo-mark-container nav-top">
-      <Logo class="logo-mark" />
-    </nuxt-link>
-    <div class="trigger nav-top" @click="toggleModal">
-      <icon-base viewbox="32" size="32"><hamburger /></icon-base>
+    <div class="sidebar tl">
+      <nuxt-link :to="{ name: 'index' }" class="nav-icon">
+        <div class="nav-icon">
+          <Logo class="logo-mark" />
+        </div>
+      </nuxt-link>
+      <p class="logo-type type-top">Andy Stew—</p>
     </div>
-    <p class="logo-type type-top">Andy Stew—</p>
-    <p class="logo-type type-bot">—Art Design</p>
+    <div class="sidebar br">
+      <div class="trigger nav-icon" @click="toggleModal">
+        <icon-base viewbox="32" size="32"><hamburger /></icon-base>
+      </div>
+      <p class="logo-type type-bot">—Art Design</p>
+    </div>
   </nav>
 </template>
 
@@ -28,53 +34,68 @@ export default {
 nav {
   --nav-position: 1rem;
 
-  @mixin nav-top-styles {
-    position: fixed;
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 100;
-    color: var(--white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: var(--type-baseline);
+  background: var(--black);
+  border-bottom: 1px solid var(--white);
+  z-index: 100;
+  overflow: hidden;
 
-    @include mixins.respond(landscape) {
-      width: 3rem;
-      height: 3rem;
+  @include mixins.respond(md) {
+    position: relative;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    display: block;
+
+    @include mixins.respond(md) {
+      position: fixed;
+      top: 0;
+      height: 100vh;
+      background: var(--black);
+      padding: var(--type-baseline);
+
+      &.tl {
+        left: 0;
+        border-right: 1px solid var(--white);
+      }
+      &.br {
+        right: 0;
+        border-left: 1px solid var(--white);
+      }
     }
   }
 
-  .nav-top {
-    position: fixed;
+  .nav-icon {
+    color: var(--white);
     width: 2.5rem;
     height: 2.5rem;
-    z-index: 100;
-    color: var(--white);
 
-    @include mixins.respond(landscape) {
-      width: 2.5rem;
-      height: 2.5rem;
+    &:hover {
+      cursor: pointer;
     }
 
-    &.logo-mark-container {
-      top: var(--nav-position);
-      left: var(--nav-position);
-
-      .logo-mark {
-        width: 100%;
-        fill: currentColor;
-      }
+    .logo-mark {
+      width: 100%;
+      fill: currentColor;
     }
 
     &.trigger {
       @include mixins.flex-center;
-      top: var(--nav-position);
-      right: var(--nav-position);
-
-      &:hover {
-        cursor: pointer;
-      }
     }
   }
 
   .logo-type {
+    display: none;
     position: fixed;
     font-family: var(--sans-wide);
     text-transform: uppercase;

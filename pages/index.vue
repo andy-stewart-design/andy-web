@@ -3,7 +3,7 @@
     ref="hero"
     class="hero-container"
     @mousemove="mouseMove"
-    @mouseout="mouseOut"
+    @mouseleave="mouseOut"
   >
     <div class="eye-container">
       <svg class="eye" viewBox="0 0 36 24">
@@ -58,7 +58,7 @@ export default {
       title: 'The Graphic Design Portfolio of Andy Stewart',
       descr:
         'Andy Stewart is the Digital Creative Director at Turnstyle in Seattle',
-      date: null,
+      date: '',
       hero: '',
       eye: '',
       posX: 0,
@@ -76,7 +76,6 @@ export default {
       clampY: 0,
       ternX: 0,
       ternY: 0,
-      log: '',
     }
   },
   mounted() {
@@ -137,8 +136,6 @@ export default {
       this.posY = (this.mouseY - this.midY) / 80
 
       this.moveBalls()
-      // eslint-disable-next-line
-      console.log('eye: ' + this.positionX)
     },
     mouseOut() {
       this.posX = 0
@@ -181,21 +178,14 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    // border: 4px solid green;
 
     svg.eye {
       display: block;
       pointer-events: none;
-      font-family: 'SohneSchmalTest-Fett';
-      font-size: 10.5px;
-      color: white;
-      // border: 4px solid green;
-
       width: 95%;
       height: 90%;
-      margin: auto;
 
-      @include mixins.respond(landscape) {
+      @include mixins.respond(md) {
         width: 80%;
       }
 
@@ -215,7 +205,7 @@ export default {
     justify-content: space-between;
     width: 100%;
     min-height: 100%;
-    padding: var(--type-baseline) 0.5rem;
+    padding: calc(var(--type-baseline) * 7) 0.5rem var(--type-baseline);
 
     @include mixins.respond(md) {
       padding: var(--type-baseline) 4.25rem;
