@@ -8,9 +8,9 @@
       <p class="subhead">
         Andy Stewart is the
         <a href="https://turnstyle.studio/" target="_blank"
-          >Digital Creative Director Dude!</a
+          >Digital Creative Director</a
         >
-        at&nbsp;Turnstyle Bong!
+        at&nbsp;Turnstyle
       </p>
     </div>
   </div>
