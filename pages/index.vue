@@ -10,7 +10,7 @@
         <a href="https://turnstyle.studio/" target="_blank"
           >Digital Creative Director Dude!</a
         >
-        at&nbsp;Turnstyle
+        at&nbsp;Turnstyle Bong!
       </p>
     </div>
   </div>
