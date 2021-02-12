@@ -1,18 +1,22 @@
 <template>
   <nav class="nav">
     <div class="sidebar tl">
-      <nuxt-link :to="{ name: 'index' }" class="nav-icon">
-        <div class="nav-icon">
-          <Logo class="logo-mark" />
-        </div>
-      </nuxt-link>
-      <p class="logo-type type-top">Andy Stew—</p>
+      <div class="inner">
+        <nuxt-link :to="{ name: 'index' }" class="nav-icon">
+          <div class="nav-icon">
+            <Logo class="logo-mark" />
+          </div>
+        </nuxt-link>
+        <LogotypeTop class="logo-type tl" />
+      </div>
     </div>
     <div class="sidebar br">
-      <div class="trigger nav-icon" @click="toggleModal">
-        <icon-base viewbox="32" size="32"><hamburger /></icon-base>
+      <div class="inner">
+        <div class="trigger nav-icon" @click="toggleModal">
+          <icon-base viewbox="32" size="32"><hamburger /></icon-base>
+        </div>
+        <LogotypeBot class="logo-type br" />
       </div>
-      <p class="logo-type type-bot">—Art Design</p>
     </div>
   </nav>
 </template>
@@ -55,6 +59,7 @@ nav {
   }
 
   .sidebar {
+    position: relative;
     display: block;
 
     @include mixins.respond(md) {
@@ -62,7 +67,6 @@ nav {
       top: 0;
       height: 100vh;
       background: var(--black);
-      padding: var(--type-baseline);
 
       &.tl {
         left: 0;
@@ -73,69 +77,49 @@ nav {
         border-left: 1px solid var(--white);
       }
     }
-  }
 
-  .nav-icon {
-    color: var(--white);
-    width: 2.5rem;
-    height: 2.5rem;
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    .logo-mark {
+    .inner {
+      position: relative;
       width: 100%;
-      fill: currentColor;
-    }
+      height: 100%;
 
-    &.trigger {
-      @include mixins.flex-center;
-    }
-  }
-
-  .logo-type {
-    display: none;
-    position: fixed;
-    font-family: var(--sans-wide);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: var(--text-sm);
-    letter-spacing: 2px;
-    color: var(--white);
-    width: 100%;
-    z-index: 99;
-    pointer-events: none;
-
-    @include mixins.respond(landscape) {
-      font-size: 14px;
-    }
-
-    &.type-top {
-      left: 0;
-      top: 1.5rem;
-
-      @include mixins.respond(landscape) {
-        top: 0;
-        transform: rotate(90deg) translateY(-220%);
-        transform-origin: 0 0;
-        width: 100vh;
+      @include mixins.respond(md) {
+        padding: var(--type-baseline);
       }
     }
 
-    &.type-bot {
-      left: 0;
-      bottom: 1.5rem;
-      // border: 1px solid blue;
+    .nav-icon {
+      color: var(--white);
+      width: 2.5rem;
+      height: 2.5rem;
 
-      @include mixins.respond(landscape) {
-        top: 0;
-        bottom: auto;
-        left: auto;
-        right: 0;
-        transform: rotate(-90deg) translateY(-220%);
-        transform-origin: 100% 0;
-        width: 100vh;
+      &:hover {
+        cursor: pointer;
+      }
+
+      .logo-mark {
+        width: 100%;
+        fill: currentColor;
+      }
+
+      &.trigger {
+        @include mixins.flex-center;
+      }
+    }
+
+    .logo-type {
+      display: none;
+
+      @include mixins.respond(md) {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: var(--white);
+        fill: currentColor;
+        width: 8rem;
+        transform: rotate(-90deg) translate(-50%, -50%);
+        transform-origin: 0% 0%;
       }
     }
   }

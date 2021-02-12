@@ -217,11 +217,13 @@ export default {
       max-width: 840px;
       padding: 0 0.5rem;
       font-family: var(--sans-book);
-      font-size: var(--text-2xl);
-      line-height: calc(var(--type-baseline) * 4.5);
+      font-size: var(--text-xl);
+      line-height: calc(var(--type-baseline) * 3);
       font-variant-numeric: tabular-nums;
 
       @include mixins.respond(md) {
+        font-size: var(--text-2xl);
+        line-height: calc(var(--type-baseline) * 4.5);
         padding: 0 0.75rem;
       }
     }
