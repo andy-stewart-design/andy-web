@@ -44,7 +44,7 @@
       <h1 class="hero-head">
         Andy Stewart is a graphic designer working at the intersection of brand
         and technology. He is currently the digital creative director at
-        Turnstyle.
+        <a href="https://turnstyle.studio/">Turnstyle</a>.
       </h1>
       <h1 class="hero-head">&copy;&nbsp;{{ date }}</h1>
     </div>
@@ -164,8 +164,6 @@ export default {
 
 .hero-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -216,15 +214,42 @@ export default {
       width: 100%;
       max-width: 840px;
       padding: 0 0.5rem;
-      font-family: var(--sans-book);
+      font-family: 'Sohne Med';
       font-size: var(--text-xl);
       line-height: calc(var(--type-baseline) * 3);
       font-variant-numeric: tabular-nums;
+      font-variant: slashed-zero;
 
       @include mixins.respond(md) {
         font-size: var(--text-2xl);
         line-height: calc(var(--type-baseline) * 4.5);
         padding: 0 0.75rem;
+      }
+
+      a {
+        position: relative;
+        transition: color 0.25s;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #daf11c;
+          transform: scaleX(0);
+          transform-origin: 0% 50%;
+          transition: transform 0.375s;
+        }
+
+        &:hover {
+          color: #daf11c;
+
+          &:after {
+            transform: scaleX(1);
+          }
+        }
       }
     }
   }

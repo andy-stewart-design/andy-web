@@ -34,5 +34,6 @@
   font-family: 'Sohne Med';
   font-style: normal;
   font-weight: 500;
-  src: url('~assets/fonts/soehne-test-kraftig.woff') format('woff');
+  src:  url('~assets/fonts/soehne-web-kraftig.woff2') format('woff2'),
+        url('~assets/fonts/soehne-web-kraftig.woff') format('woff');
 }
