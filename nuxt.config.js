@@ -32,6 +32,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     'nuxt-gsap-module',
+    '@nuxtjs/svg',
   ],
 
   generate: { fallback: '404.html' },

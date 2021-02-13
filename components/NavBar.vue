@@ -4,7 +4,7 @@
       <div class="inner">
         <nuxt-link :to="{ name: 'index' }" class="nav-icon">
           <div class="nav-icon">
-            <Logo class="logo-mark" />
+            <NuxtLogo class="logo-mark" />
           </div>
         </nuxt-link>
         <LogotypeTop class="logo-type tl" />
@@ -22,8 +22,11 @@
 </template>
 
 <script>
+import NuxtLogo from '~/assets/img/svg/logoMark.svg?inline'
+
 export default {
   name: 'NavBar',
+  components: { NuxtLogo },
   methods: {
     toggleModal() {
       this.$emit('toggle-modal')
@@ -92,9 +95,11 @@ nav {
       color: var(--white);
       width: 2.5rem;
       height: 2.5rem;
+      transition: color 0.25s;
 
       &:hover {
         cursor: pointer;
+        color: var(--blue);
       }
 
       .logo-mark {
