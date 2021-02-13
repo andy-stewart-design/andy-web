@@ -43,7 +43,7 @@
     <div class="grid-container">
       <h1 class="hero-head">
         Andy Stewart is a graphic designer working at the intersection of brand
-        and technology. He is currently the digital creative director at test
+        and technology. He is currently the digital creative director at
         <a href="https://turnstyle.studio/">Turnstyle</a>.
       </h1>
       <h1 class="hero-head">&copy;&nbsp;{{ date }}</h1>
