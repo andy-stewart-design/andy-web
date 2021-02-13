@@ -209,14 +209,14 @@ export default {
           left: 0;
           width: 100%;
           height: 2px;
-          background: #daf11c;
+          background: var(--yellow);
           transform: scaleX(0);
           transform-origin: 0% 50%;
           transition: transform 0.375s;
         }
 
         &:hover {
-          color: #daf11c;
+          color: var(--yellow);
 
           &:after {
             transform: scaleX(1);

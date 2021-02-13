@@ -95,11 +95,11 @@ nav {
       color: var(--white);
       width: 2.5rem;
       height: 2.5rem;
-      transition: color 0.25s;
+      transition: color 0.375s;
 
       &:hover {
         cursor: pointer;
-        color: var(--blue);
+        color: var(--yellow);
       }
 
       .logo-mark {
